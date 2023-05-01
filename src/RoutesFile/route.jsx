@@ -29,11 +29,14 @@ const router = createBrowserRouter([
             element:<Navigate to={"/categories/0"}></Navigate>
           
         },
-        {
+
+       {
             path:"/categories/:idno",
             element:<Categories />,
-            loader : ()=> fetch("http://localhost:5000/news")
-        }
+        loader : ()=> fetch("https://dragon-news-resource-mahfuz012.vercel.app/news")
+       }
+
+
       ]
 
 
@@ -46,7 +49,7 @@ const router = createBrowserRouter([
       children:[{
         path:"/newsdetails/:idno",
         element:<NewsDetails />,
-        loader : ()=> fetch("http://localhost:5000/news")
+        loader : ()=> fetch("https://dragon-news-resource-mahfuz012.vercel.app/news")
       }]
     },
 
